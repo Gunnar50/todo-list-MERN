@@ -17,11 +17,17 @@ mongoose.connect(process.env.MONGO_URI)
 .then(() => {console.log("Connected to DB");}).catch((err) => console.log("error", err))
 
 // get all items
-const Todo = require("./models/Todo")
+const Todo = require("./models/Todo");
 app.get("/todos", async (req, res) => {
-    const todos = await Todo.find();
-    res.json(todos);
-})
+    try {
+        const todos = await Todo.find();
+        res.json(todos);
+    } catch (error) {
+        console.error(error); // log the error for debugging
+        res.status(500).json({ error: 'An error occurred while fetching todos' });
+    }
+});
+
 
 // create new items
 app.post("/todo/new", (req, res) => {
