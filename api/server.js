@@ -8,7 +8,7 @@ const app = express();
 app.use(express.json());
 
 app.use(cors({
-    origin:'https://todo-list-mern-client.vercel.app/', 
+    origin:'https://todo-list-mern-client.vercel.app', 
     credentials:true,            //access-control-allow-credentials:true
     optionSuccessStatus:200,
 }));
