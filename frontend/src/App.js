@@ -12,13 +12,13 @@ function App() {
     }, []);
 
     const getTodos = () => {
-        fetch(`todos`)
+        fetch(`${API_BASE}/todos`)
         .then((response) => response.json())
         .then((data) => setTodos(data));
     }
 
     const handleCheckbox = async (id) => {
-		const data = await fetch(`todo/complete/${id}`, {method:"PUT"}).then(response => response.json());
+		const data = await fetch(`${API_BASE}/todo/complete/${id}`, {method:"PUT"}).then(response => response.json());
 
 		setTodos(todos => todos.map(item => {
 			if (item._id === data._id) {
@@ -42,7 +42,7 @@ function App() {
     }
 
     const addNewItem = async () => {
-        const data = await fetch(`todo/new`, {
+        const data = await fetch(`${API_BASE}/todo/new`, {
             headers: {"Content-Type": "application/json"},
             method: "POST",
             body: JSON.stringify({
