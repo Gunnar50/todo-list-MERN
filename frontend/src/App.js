@@ -14,8 +14,7 @@ function App() {
     const getTodos = () => {
         fetch(`todos`)
         .then((response) => response.json())
-        .then((data) => setTodos(data))
-        .catch((err) => console.log("Error", err));
+        .then((data) => setTodos(data));
     }
 
     const handleCheckbox = async (id) => {
