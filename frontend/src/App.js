@@ -3,7 +3,7 @@ import {useState, useEffect} from "react";
 
 
 
-const API_BASE = "http://localhost:4000"
+const API_BASE = "https://todo-list-mern-peach.vercel.app/"
 
 function App() {
     const [todos, setTodos] = useState([]);
