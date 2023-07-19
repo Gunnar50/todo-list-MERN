@@ -18,3 +18,10 @@ DELETE http://localhost:4000/todo/delete/64b7ac5a0926fa0fb69bd612
 PUT http://localhost:4000/todo/complete/64b7b9a0b9f8a9ff27e6c293
 
 
+###
+POST https://todo-list-mern-ebon.vercel.app/todos
+Content-Type: application/json
+
+{
+    "text": "Order Pizza"
+}
