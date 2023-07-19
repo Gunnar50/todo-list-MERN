@@ -12,7 +12,7 @@ function App() {
     }, []);
 
     const getTodos = () => {
-        fetch(`${API_BASE}/todos`)
+        fetch(`${API_BASE}/todos`, {mode:"no-cors"})
         .then((response) => response.json())
         .then((data) => setTodos(data))
         .catch((err) => console.log("Error", err));
