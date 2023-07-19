@@ -1,12 +1,14 @@
 {
     "version": 2,
+    "buildCommand": "cd frontend && npm install && npm run build",
+    "outputDirectory": "frontend/dist",
     "builds": [
       { "src": "*.js", "use": "@vercel/node" }
     ],
     "rewrites": [
         {
-        "src": "/(.*)",
-        "dest": "/server.js" 
+        "src": "/api(.*)",
+        "dest": "/api/server.js" 
         }
     ],
     "headers": [
