@@ -1,9 +1,6 @@
 import {useState, useEffect} from "react";
 
-
-
-
-const API_BASE = "https://todo-list-mern-peach.vercel.app/"
+const API_BASE = "https://todo-list-mern-peach.vercel.app"
 
 function App() {
     const [todos, setTodos] = useState([]);
