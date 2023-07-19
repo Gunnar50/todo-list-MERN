@@ -7,7 +7,12 @@ const app = express();
 
 app.use(express.json());
 
-app.use(cors());
+app.use(cors({
+    origin:'*', 
+    credentials:true,            //access-control-allow-credentials:true
+    optionSuccessStatus:200,
+    methods:["POST","GET","PUT","DELETE"]
+}));
 
 
 // connect to database
