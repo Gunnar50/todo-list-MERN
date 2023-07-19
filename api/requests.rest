@@ -19,7 +19,7 @@ PUT http://localhost:4000/todo/complete/64b7b9a0b9f8a9ff27e6c293
 
 
 ###
-POST https://todo-list-mern-ebon.vercel.app/todos
+POST https://todo-list-mern-ebon.vercel.app/todo/new
 Content-Type: application/json
 
 {
