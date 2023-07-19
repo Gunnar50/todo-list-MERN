@@ -6,7 +6,7 @@
     "rewrites": [
         {
         "src": "/(.*)",
-        "dest": "/" 
+        "dest": "/server.js" 
         }
     ],
     "headers": [
